@@ -8,9 +8,10 @@ using namespace std;
 #define vi          vector<int>
 #define vll         vector<ll>
 #define vii         vector<pii>
-#define mi          map<int,int>
+#define Mi          map<int,int>
 #define mii         map<pii,int>
 #define all(a)      (a).begin(),(a).end()
+#define rall(a)      (a).rbegin(),(a).rend()
 #define x           first
 #define y           second
 #define sz(x)       (int)x.size()
