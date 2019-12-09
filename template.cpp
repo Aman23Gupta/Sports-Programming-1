@@ -20,6 +20,8 @@ using namespace std;
 #define rep(i,a,b)  for(int i=a;i<b;i++)
 #define rem(i,a,b)  for(int i=a;i>b;i--)
 #define mp(a,b)     make_pair(a,b)
+#define INF         numeric_limits<ll>::max();
+#define NINF        numeric_limits<ll>::min();
 #define vvi(a,b,name)    vector<vector<int>> name(a,vector<int>(b,-1))
 
 
