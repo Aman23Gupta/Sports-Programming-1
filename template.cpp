@@ -12,8 +12,8 @@ using namespace std;
 #define mii         map<pii,int>
 #define all(a)      (a).begin(),(a).end()
 #define rall(a)      (a).rbegin(),(a).rend()
-#define x           first
-#define y           second
+#define ff           first
+#define ss           second
 #define sz(x)       (int)x.size()
 #define endl        '\n'
 #define mod        1000000007
