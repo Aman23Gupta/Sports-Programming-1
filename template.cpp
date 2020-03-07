@@ -2,6 +2,7 @@
 using namespace std;
 
 #define ll          long long
+#define ull         unsigned long long
 #define pb          push_back
 #define pii         pair<int,int>
 #define pll         pair<long,long>
