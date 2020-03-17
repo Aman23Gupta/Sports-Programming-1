@@ -1,4 +1,10 @@
+C++ Tricks-
 http://codeforces.com/blog/entry/15643
 
 order statistics tree
 policy based data structures
+
+
+Seg Tree- 
+https://codeforces.com/blog/entry/44478?#comment-290116
+https://codeforces.com/blog/entry/44478?#comment-290057
