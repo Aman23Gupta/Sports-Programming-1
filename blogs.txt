@@ -11,6 +11,8 @@ https://codeforces.com/blog/entry/44478?#comment-290116
 https://codeforces.com/blog/entry/44478?#comment-290057
 https://codeforces.com/blog/entry/15890
 
+Perseg Tree-
+https://discuss.codechef.com/t/distnum2-editorial/12566
 
 interesting problems that i've solved with seg trees...
 number of smaller elements in left side.
