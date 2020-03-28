@@ -4,6 +4,7 @@ bool isSquare(long double x)
   return ((sr - floor(sr)) == 0);
 }
 
+-------------------------------------------------------------------------------------------
 
 int dayofweek(int d, int m, int y)  
 {  
@@ -14,4 +15,30 @@ int dayofweek(int d, int m, int y)
              y / 400 + t[m - 1] + d) % 7;  
 } //returns 1 for monday,2 for tuesday,0 for sunday... 
 
-//INT_MAX and INT_MIN can be used to check for signed integer overflow, also sign change can be used to identify overflow
+--------------------------------------------------------------------------------------------
+
+  //INT_MAX and INT_MIN can be used to check for signed integer overflow, also sign change can be used to identify overflow
+
+--------------------------------------------------------------------------------------------
+
+// ENCODING TWO NUMBERS INTO ONE:- https://en.wikipedia.org/wiki/Pairing_function
+//let the number by x,y and they are encoded into z 
+// condition x*y should not overflow
+// x should be bigger of two
+
+int encode(int x,int y){
+  int z;
+  z=((x+y)*(x+y+1))/2+y;
+  return z;
+}
+
+void decode(int z,int x,int y){
+  int w=floor(((sqrt(8*z+1))-1)/2);
+  int t=(w*w+w)/2;
+  y=z-t;
+  x=w-y;
+}
+
+---------------------------------------------------------------------------------------------
+
+  
