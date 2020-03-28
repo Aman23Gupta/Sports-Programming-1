@@ -39,6 +39,19 @@ void decode(int z,int x,int y){
   x=w-y;
 }
 
+//another way
+/*Now, we will do a slight trick to encode 2 numbers in one index.
+This trick assumes that N * N does not overflow.
+
+1) Increase every Array element Arr[i] by (Arr[Arr[i]] % n)*n.
+2) Divide every element by N.
+Given a number as
+
+   A = B + C * N   if ( B, C < N )
+   A % N = B
+   A / N = C
+We use this fact to encode 2 numbers into each element of Arr.*/
+
 ---------------------------------------------------------------------------------------------
 
   
