@@ -1,5 +1,6 @@
-C++ Tricks-
+Tricks-
 http://codeforces.com/blog/entry/15643
+https://codeforces.com/blog/entry/75456
 ------------------------------------------------------------------------
 order statistics tree
 https://codeforces.com/blog/entry/11080
