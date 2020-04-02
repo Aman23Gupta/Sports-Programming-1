@@ -54,3 +54,8 @@ int rot(string s){
 --------------------------------------------------------------------------
 Implementation of LONGEST PALINDROMIC SUBSTRING
 https://www.geeksforgeeks.org/manachers-algorithm-linear-time-longest-palindromic-substring-part-4/
+
+--------------------------------------------------------------------------
+PLAYLISTS
+https://www.youtube.com/playlist?list=PLi0ZM-RCX5nvImim3_ilsdLOtDDkOWt-X
+https://www.youtube.com/playlist?list=PLixpXjrHOw3YDrcGY1Y6yCAAyuFsmKNZK
