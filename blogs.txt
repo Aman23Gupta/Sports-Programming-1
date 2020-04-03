@@ -59,3 +59,7 @@ https://www.geeksforgeeks.org/manachers-algorithm-linear-time-longest-palindromi
 PLAYLISTS
 https://www.youtube.com/playlist?list=PLi0ZM-RCX5nvImim3_ilsdLOtDDkOWt-X
 https://www.youtube.com/playlist?list=PLixpXjrHOw3YDrcGY1Y6yCAAyuFsmKNZK
+
+--------------------------------------------------------------------------
+representation of a number as diff of squares :-https://qr.ae/pNvqR2
+
