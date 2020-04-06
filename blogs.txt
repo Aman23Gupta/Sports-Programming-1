@@ -5,6 +5,12 @@ https://codeforces.com/blog/entry/75456
 order statistics tree
 https://codeforces.com/blog/entry/11080
 policy based data structures
+
+#include <ext/pb_ds/assoc_container.hpp>
+#define ok(x)          order_of_key(x)
+#define fo(x)          find_by_order(x)
+using namespace __gnu_pbds;
+typedef tree<int, null_type, less_equal<int>, rb_tree_tag, tree_order_statistics_node_update> os;
 ------------------------------------------------------------------------
 Seg Tree- 
 https://codeforces.com/blog/entry/44478?#comment-290116
