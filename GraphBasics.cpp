@@ -64,6 +64,7 @@ void dfs(int node){
 // then you run a DFS from that node... the max distance obtained is the diameter.
 
 //BFS
+// as DFS can be used to find SSSP for unweighted tree, BFS can be used to find SSSP for unweighted graph.
 void bfs(int node){
     visited[node];
     d[node]=0;
