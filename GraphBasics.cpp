@@ -66,7 +66,7 @@ void dfs(int node){
 //BFS
 // as DFS can be used to find SSSP for unweighted tree, BFS can be used to find SSSP for unweighted graph.
 void bfs(int node){
-    visited[node];
+    visited[node]=true;
     d[node]=0;
     q.push(node);
     while(!q.empty()){
