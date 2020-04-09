@@ -38,3 +38,11 @@ void primeFactors(int n)
     if (n > 2) 
         printf ("%d ", n); 
 }
+
+//to find modulo inverse of numbers till N
+const int mod=998244353;
+int inv[N];
+inv[1] = 1;
+for(int i = 2; i < N; ++i)
+    inv[i] = (mod - (mod/i) * inv[mod%i] % mod) % mod;
+
