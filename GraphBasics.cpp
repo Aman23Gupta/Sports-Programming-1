@@ -80,3 +80,28 @@ void bfs(int node){
         }
     }
 }
+
+//finding bridges
+//the code is based on in and low times
+// in time when dfs reaches the node
+// low it is the lowest time when dfs reaches node or its ancestors(nodes it is directly connected with).
+
+void dfs(int node,int par){
+    visited[node]=true;
+    in[node]=timer;
+    low[node]=timer;
+    timer++;
+    for(auto child:v[node]){
+        if(child==par)continue;
+        else if(visited[child]){    // this is the case of back edge... a back edge can never be a bridge
+            low[node]=min(low[child],low[node]);
+        }
+        else{
+            dfs(child,node);
+            if(in[node]<low[child]){
+                cout<<"bridge from "<<node<<" to "<<child<<endl;
+            }
+            low[node]=min(low[node],low[child]);
+        }
+    }
+}
