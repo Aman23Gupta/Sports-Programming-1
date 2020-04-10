@@ -105,3 +105,7 @@ void dfs(int node,int par){
         }
     }
 }
+
+//relation beteween bridge and articulation point
+// the end of the bridge can be articulation point if their degree is more than 1.
+// it is possible to have articulation point even when no bridge exists in the graph
