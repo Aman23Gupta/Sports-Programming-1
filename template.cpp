@@ -24,7 +24,14 @@ using namespace std;
 #define INF         numeric_limits<ll>::max();
 #define NINF        numeric_limits<ll>::min();
 #define vvi(a,b,name)    vector<vector<int>> name(a,vector<int>(b,-1))
-
+inline ll add(ll a,ll b,ll m){
+    if((a+b)>=m)return (a+b)%m;
+    return a+b;
+}
+inline ll mul(ll a,ll b,ll m){
+    if((a*b)<m)return a*b;
+    return (a*b)%m;
+}
 
 void solve(){
 
