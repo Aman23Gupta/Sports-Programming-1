@@ -15,6 +15,10 @@ usage
 lower = lower_bound (v.begin(), v.end(), val);  
 upper = upper_bound (v.begin(), v.end(), val);  
 
+lower_bound and upper_bound can be used to find the lesser or equal and lesser(respectively) to val also...
+sort(rall(v));
+lower=lower_bound(all(v),val,greater<int>());
+upper=upper_bound(all(v),val,greater<int>());
 
 
 replace function with strings...
