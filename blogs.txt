@@ -5,6 +5,7 @@ https://codeforces.com/blog/entry/75456
 https://codeforces.com/blog/entry/53925 ==>Nisiyama_Suzune's blog
 he/she covers advanced maths topics
 
+https://codeforces.com/blog/entry/15296 ==>Adamant's dynamic connectivity
 //struct with initialisation...
 struct node{
     ll p0,p1,p2,p3;
