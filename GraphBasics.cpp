@@ -12,6 +12,17 @@ void dfs(int node){
 
 //DFS can also be used to find SSSP in case of a tree... you require another array for storing distance and another arguement that
 //stores the distance to assigned right after we mark that node true... 
+void dfs1(int node){
+    visited[node]=true;
+    if(v[node].size()==1)noc[node]=0;
+    for(auto u:v[node]){
+        if(visited[u])continue;
+        dis[u]=1+dis[node];
+        dfs1(u);
+        noc[node]+=1+noc[u];
+ 
+    }
+}// here noc=> no of child, dis=> distance from root.
 
 //checking if given graph is Bipartite
 bool dfs(int node,int col){
@@ -109,3 +120,93 @@ void dfs(int node,int par){
 //relation beteween bridge and articulation point
 // the end of the bridge can be articulation point if their degree is more than 1.
 // it is possible to have articulation point even when no bridge exists in the graph
+
+
+//Kruskal's Algorithm(Minimum spanning Tree using DSU)
+long kruskal(pair<int,pair<int,int>> p[],long m){//p is an array of pairs... first element is weight, and second element is a pair describing edge.
+    long cost=0;                                 // 'm' denotes number of edges
+    for(long i=0;i<m;i++){
+        int x=p[i].second.first;
+        int y=p[i].second.second;
+        int fx,fy;
+        fx=fin(x);
+        fy=fin(y);
+        if(fx==fy)continue;
+        cost+=p[i].first;
+        unio(x,y);
+        
+    }
+    return cost;
+    
+}
+
+//naive implementation of LCA, time comp => O(N)
+int lca(int a,int b){
+    if(dis[a]>dis[b])swap(a,b);
+    
+    int d=dis[b]-dis[a];
+    
+    while(d>0){
+        b=par[b];
+        d--;
+    }
+    
+    if(a==b)return a;
+    
+    while(par[a]!=par[b]){
+        a=par[a];
+        b=par[b];
+    }
+    return par[a];
+}
+
+//log(N) LCA
+const int N=10000;
+const int maxN=(int)log2(N)+1;
+int lca[N+1][maxN+1];
+vector<int> v[N];
+int dis[N];
+
+void dfs(int node,int par){
+    lca[node][0]=par;
+    for(auto child:v[node]){
+        if(child==par)continue;
+        dis[child]=dis[node]+1;
+        dfs(child,node);
+    }
+}
+
+
+void init(){
+    memset(lca, -1, sizeof(lca));
+    dfs(1,-1);
+    rep(j,1,maxN+1){
+        rep(i,1,N+1){
+            if(lca[i][j-1]!=-1){
+                int par=lca[i][j-1];
+                lca[i][j]=lca[par][j-1];
+            }
+        }
+    }
+}
+
+int LCA(int a,int b){
+    if(dis[a]>dis[b])swap(a,b);
+    int d=dis[b]-dis[a];
+    while(d>0){
+        int i=(int)log2(d);
+        b=lca[b][i];
+        d-=(1<<i);
+    }
+
+    if(a==b)return a;
+
+    rem(i,maxN,-1){
+        if(lca[a][i]!=-1 && lca[a][i]!=lca[b][i]){
+            a=lca[a][i];
+            b=lca[b][i];
+        }
+    }
+
+    return lca[a][0];
+}
