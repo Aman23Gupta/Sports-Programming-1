@@ -210,3 +210,8 @@ int LCA(int a,int b){
 
     return lca[a][0];
 }
+
+//distance between two nodes in log(N) time.
+//preprocess lca and dis arrays
+// distance between a and b = dis[a]+dis[b]-2*dis[LCA(a,b)];
+
