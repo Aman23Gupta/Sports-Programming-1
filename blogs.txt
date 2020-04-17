@@ -90,3 +90,9 @@ representation of a number as diff of squares :-https://qr.ae/pNvqR2
 MO's algorithm on Trees
 https://codeforces.com/blog/entry/68271
 https://codeforces.com/blog/entry/43230
+
+---------------------------------------------------------------------------
+Rerooting Technique
+https://codeforces.com/blog/entry/76150
+https://codeforces.com/blog/entry/68142
+https://codeforces.com/blog/entry/53265
