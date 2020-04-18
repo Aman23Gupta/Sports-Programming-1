@@ -8,6 +8,9 @@ he/she covers advanced maths topics
 https://codeforces.com/blog/entry/15296 ==>Adamant's dynamic connectivity
 
 https://codeforces.com/blog/entry/45223 ==>SOS Dynamic Programming
+
+https://www.quora.com/q/threadsiiithyderabad?sort=top => Lalit Kundu's Blog
+
 //struct with initialisation...
 struct node{
     ll p0,p1,p2,p3;
