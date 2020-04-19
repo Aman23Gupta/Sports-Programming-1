@@ -3,3 +3,4 @@
 * https://kenkoooo.com/atcoder/#/table/
 * https://cfviz.netlify.app/index.html
 * https://rd200.pythonanywhere.com/
+* https://codeforces.com/blog/entry/57282
