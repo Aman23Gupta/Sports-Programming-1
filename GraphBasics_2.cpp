@@ -57,3 +57,40 @@ void dfs(int node,int par){
     }
 
 }
+
+// finding the total number of spanning trees in a graph
+// if graph is complete with n nodes then we have caley's formula giving n^(n-2) spanning trees.
+// otherwise the general idea is to use  Kirchhoff’s Theorem implemented below.
+//https://www.geeksforgeeks.org/total-number-spanning-trees-graph/
+//NOTE: include Determinant.cpp
+int mat[10][10];
+void solve(){
+    int n,m;cin>>n>>m;
+    int a,b;
+    rep(i,0,m){
+        cin>>a>>b;
+        mat[a][b]=1;
+        mat[b][a]=1;
+    }
+    rep(i,1,n+1){
+        int su=0;
+        rep(j,1,n+1){
+            su+=mat[i][j];
+        }
+        mat[i][i]=su;
+    }
+    rep(i,1,n+1){
+        rep(j,1,n+1){
+            if(i==j || mat[i][j]==0)continue;
+            mat[i][j]=-1;
+        }
+    }
+
+    vvd(n-1,n-1,v);
+    rep(i,2,n+1){
+        rep(j,2,n+1){
+            v[i-2][j-2]=mat[i][j];
+        }
+    }
+    deter(v,n-1);
+}
