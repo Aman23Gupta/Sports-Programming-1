@@ -1,6 +1,7 @@
 // https://www.youtube.com/watch?v=qJXKY2tr1_4
-// remeber to change all the ints to doubles in vvi
+// remeber to change all the ints to doubles in vvi...Don't worry added vvd
 // here n is the size of sq matrix
+//works in O(n^3)
 
 void deter(vector<vector<double>> &a,int n){
     const double EPS = 1E-9;
