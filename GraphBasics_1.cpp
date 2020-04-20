@@ -105,7 +105,7 @@ void dfs(int node,int par){
     for(auto child:v[node]){
         if(child==par)continue;
         else if(visited[child]){    // this is the case of back edge... a back edge can never be a bridge
-            low[node]=min(low[child],low[node]);
+            low[node]=min(in[child],low[node]);
         }
         else{
             dfs(child,node);
