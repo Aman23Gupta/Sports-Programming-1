@@ -4,13 +4,6 @@
 
 void deter(vector<vector<double>> &a,int n){
     const double EPS = 1E-9;
-    rep(i,0,n){
-        rep(j,0,n){
-            cout<<a[i][j]<<" ";
-        }
-        cout<<endl;
-    }
-
     double det = 1;
     for (int i=0; i<n; ++i) {
         int k = i;
