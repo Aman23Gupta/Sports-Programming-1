@@ -35,6 +35,7 @@ template<typename Head,typename...Tail>void debug_out(vector<string>args,int idx
 #define INF         numeric_limits<ll>::max();
 #define NINF        numeric_limits<ll>::min();
 #define vvi(a,b,name)    vector<vector<int>> name(a,vector<int>(b,-1))
+#define vvd(a,b,name)    vector<vector<double>> name(a,vector<double>(b,-1))
 //const ld pi=3.14159265359;
 inline ll add(ll a,ll b,ll m){
     if((a+b)>=m)return (a+b)%m;
