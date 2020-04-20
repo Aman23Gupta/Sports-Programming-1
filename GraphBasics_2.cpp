@@ -32,3 +32,28 @@ void solve(){
         cout<<dis[i]<<" ";
     }
 }
+
+// algortihm to find articulation points
+void dfs(int node,int par){
+    visited[node]=true;
+    in[node]=lo[node]=timer++;
+    int children=0;
+    for(auto child:v[node]){
+        if(child==par)continue;
+        if(visited[child]){
+            lo[node]=min(lo[node],in[child]);
+        }
+        else{
+            children++;
+            dfs(child,node);
+            lo[node]=min(lo[node],lo[child]);
+            if(lo[child]>=in[node] && par!=-1){
+                    ap.insert(node);
+            }
+        }
+    }
+    if(par==-1 && children>1){
+        ap.insert(node);
+    }
+
+}
