@@ -16,17 +16,13 @@
 
 //Algorithm for checking if a list of integers is pairwise coprime
 //https://cs.stackexchange.com/questions/93030/algorithm-for-checking-if-a-list-of-integers-is-pairwise-coprime
-/*First, two facts about coprime integers:
-Iff a and b are coprime, then ab=lcm(a,b)
-Iff a is coprime to both b and c, then a is coprime to bc
-It follows from this that a set of distinct integers {a,b,⋯z} is pairwise coprime if its product is equal to its least common multiple.
-
-You can compute the least common multiple by using the following identity:
-lcm(a,b,c)=lcm(a,lcm(b,c))
-Assuming you have n numbers with k digits each, and multiplying/dividing/modding two numbers is O(1) (which may or may not be a good assumption depending on your model), then:
-
-Calculating the product of your set takes O(n)
-Calculating the gcd of two numbers takes O(k)
-Calculating the lcm of two numbers thus also takes O(k), by reduction to gcd
-So calculating the lcm of your entire set takes O(nk)
-Thus, the time complexity of the entire algorithm is O(nk).*/
+bool pairwisePrime(vector<ll> &v, int n){
+    ll lcm=v[0];
+    ll prod=v[0];
+    rep(i,1,n){
+        lcm=(lcm*v[i])/__gcd(lcm,v[i]);
+        prod*=v[i];
+    }
+    if(lcm==prod)return true;
+    else return false;
+}
