@@ -18,6 +18,10 @@ struct node{
         p0{one},p1{two},p2{three},p3{four} {}
     ll v[4]={p0,p1,p2,p3};
 };
+
+comparator => bool func(a,b);
+if you want to sort ascending => return b<a;
+if you want to sort descending => return a>b;
 ------------------------------------------------------------------------
 order statistics tree
 https://codeforces.com/blog/entry/11080
