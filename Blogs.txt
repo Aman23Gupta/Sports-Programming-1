@@ -11,6 +11,8 @@ https://codeforces.com/blog/entry/45223 ==>SOS Dynamic Programming
 
 https://www.quora.com/q/threadsiiithyderabad?sort=top => Lalit Kundu's Blog
 
+http://codeforces.com/blog/entry/70467 => ouuan segment tree template
+
 //struct with initialisation...
 struct node{
     ll p0,p1,p2,p3;
