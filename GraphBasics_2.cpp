@@ -94,3 +94,33 @@ void solve(){
     }
     deter(v,n-1);
 }
+
+
+//0-1 BFS
+//Given a graph with edges having weight equal to 0 or 1. Find SSSP in O(E+V)
+//This problem can be easily handled in O(E+VlogV) using Djkstra
+
+// Lemma: During the execution of BFS, the queue holding the vertices onl contains elements from at
+// max two successive levels of the BFS tree.
+//https://cp-algorithms.com/graph/01_bfs.html#toc-tgt-1
+bfs01(int node){
+    dis[node] = 0;
+    deque<int> q;
+    q.push_front(node);
+    while (!q.empty()) {
+        int s = q.front();
+        q.pop_front();
+        for (auto child : v[s]) {
+            int u = child.ff;
+            int w = child.ss;
+            if (d[s] + w < d[u]) {
+                d[u] = d[v] + w;
+                if (w == 1)
+                    q.push_back(u);
+                else
+                    q.push_front(u);
+            }
+        }
+    }
+}
+
