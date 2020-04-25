@@ -103,6 +103,9 @@ void solve(){
 // Lemma: During the execution of BFS, the queue holding the vertices onl contains elements from at
 // max two successive levels of the BFS tree.
 //https://cp-algorithms.com/graph/01_bfs.html#toc-tgt-1
+
+// in case of small range of weights a general version "Dial's Algorithm" can be used in O(V*W), W is max weight of any edge.
+// https://www.geeksforgeeks.org/dials-algorithm-optimized-dijkstra-for-small-range-weights/
 bfs01(int node){
     dis[node] = 0;
     deque<int> q;
