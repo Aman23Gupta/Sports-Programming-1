@@ -137,7 +137,7 @@ bfs01(int node){
 void dfs(int node,stack<int> &s){
     visited[node]=true;
     for(auto u:v[node]){
-        if(visited[node])continue;
+        if(visited[u])continue;
         dfs(u,s);
     }
     s.push(node);
@@ -153,8 +153,8 @@ void revdfs(int node){
     visited[node]=true;
     cout<<node<<" ";
     for(auto u:rv[node]){
-        if(visited[node])continue;
-        revDFS(u);
+        if(visited[u])continue;
+        revdfs(u);
     }
 }
 
@@ -169,12 +169,13 @@ int main(){
     rep(i,1,n+1)for(auto u:v[i])rv[u].pb(i);
     
     //step-3
+    rep(i,1,n+1)visited[i]=false;
     while(!s.empty()){
         int node=s.top();
         s.pop();
-        if(!vis[node]){
+        if(!visited[node]){
             cout<<"SCC: ";
-            revDFS(node);
+            revdfs(node);
             cout<<endl;
         }
     }
