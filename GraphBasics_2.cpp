@@ -127,3 +127,56 @@ bfs01(int node){
     }
 }
 
+// kosaraju's formula to find the strongest connected components
+// in a directed graph those SCC are components in which we can a point from any other point.
+// or you may say that SCC are component where there is route for every node from itself to itself.
+// there are 3 steps in kosaraju's algorithm
+
+//1- sorting nodes acc. to finish time of their DFS
+
+void dfs(int node,stack<int> &s){
+    visited[node]=true;
+    for(auto u:v[node]){
+        if(visited[node])continue;
+        dfs(u,s);
+    }
+    s.push(node);
+}
+
+//2- obtaining a transverse graph... i.e a graph formed by reversing the edges of orginal graph
+// this is implemented inside main
+
+//3- in this step we finally obtain connected components by call DFS on transversed graph in the order 
+// of node present in stack
+// remember to clear visited
+void revdfs(int node){
+    visited[node]=true;
+    cout<<node<<" ";
+    for(auto u:rv[node]){
+        if(visited[node])continue;
+        revDFS(u);
+    }
+}
+
+int main(){
+    //take input for graph
+    stack<int> s;
+    rep(i,1,n+1)if(!visited[i])dfs(i,s);
+    //step-1 completed
+    
+    //step-2
+    vector<int> rv[N];
+    rep(i,1,n+1)for(auto u:v[i])rv[u].pb(i);
+    
+    //step-3
+    while(!s.empty()){
+        int node=s.top();
+        s.pop();
+        if(!vis[node]){
+            cout<<"SCC: ";
+            revDFS(node);
+            cout<<endl;
+        }
+    }
+}
+
