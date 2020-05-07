@@ -8,3 +8,5 @@
   3. Finding path in a maze with obstacle
   
 * in **stable marriage problem** the side that is proposing ends up with the best choice they could have and the side that is being proposed end up with the worst choices they could have...
+
+* Set in C++ STL is implemented using **Self-Balancing Binary Search Tree**.
