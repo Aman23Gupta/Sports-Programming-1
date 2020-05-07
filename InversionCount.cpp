@@ -4,6 +4,9 @@
 // Inversion Count for an array indicates – how far (or close) the array is from being sorted. If array is already sorted then
 // inversion count is 0. If array is sorted in reverse order that inversion count is the maximum.
 
+// given array find the minimum number of swaps required to sort the array... given that you can only swap adjacent elements.
+// answer to this problem is equal to the number of inversion in the array.
+
 ll _mergeSort(int arr[], int temp[], int left, int right); 
 ll merge(int arr[], int temp[], int left, int mid, int right); 
 
