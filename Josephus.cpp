@@ -18,6 +18,7 @@ int josephus(int n,int k) {
 // J{n,2}=1+2(n−2^(⌊log2n⌋)) // it is log n base 2 and not log of 2n;
 
 //another implementaion with complexity of O(klogn)
+// remember adding 1 to the answer for 1-based indexing
 int josephus(int n, int k) {
     if (n == 1)
         return 0;
