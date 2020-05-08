@@ -33,6 +33,8 @@ void solve(){
     }
 }
 
+------------------------------------------------------------------------------------------------------------------------------
+
 // algortihm to find articulation points
 void dfs(int node,int par){
     visited[node]=true;
@@ -57,6 +59,8 @@ void dfs(int node,int par){
     }
 
 }
+
+------------------------------------------------------------------------------------------------------------------------------
 
 // finding the total number of spanning trees in a graph
 // if graph is complete with n nodes then we have caley's formula giving n^(n-2) spanning trees.
@@ -95,6 +99,8 @@ void solve(){
     deter(v,n-1);
 }
 
+------------------------------------------------------------------------------------------------------------------------------
+
 
 //0-1 BFS
 //Given a graph with edges having weight equal to 0 or 1. Find SSSP in O(E+V)
@@ -126,6 +132,8 @@ bfs01(int node){
         }
     }
 }
+
+------------------------------------------------------------------------------------------------------------------------------
 
 // kosaraju's formula to find the strongest connected components
 // in a directed graph those SCC are components in which we can a point from any other point.
@@ -181,3 +189,54 @@ int main(){
     }
 }
 
+------------------------------------------------------------------------------------------------------------------------------
+
+// Topological Sort
+// Topological Sort for DAG is a linear ordering of vertices such that for every directed edge u->v , u comes before v in orderin.
+// idea is to 1) start with a node of in-degree 0. 2) print this vertex and remove all the edges comming out from this vertex.
+// 3) Repeat 1 and 2 until the graph becomes empty.
+    
+// A common problem in which topological sorting occurs is the following. There are n variables with unknown values. For some
+// variables we know that one of them is less than the other. You have to check whether these constraints are contradictory, and if not,
+// output the variables in ascending order (if several answers are possible, output any of them)
+    
+ // Topological sort can be implemented in two ways BFS or DFS... The DFS way is given below and BFS way is based upon idea share above 
+ // covered by iDeserve
+ 
+ //note: topo has to reversed.
+ // in case of disconnected graph you'll have to call dfs multiple times for each remaining unvisited node.
+ vector<int> topo;
+ void dfs(int node){
+	visited[node]=true;
+	for(auto u:v[node]){
+		if(visited[u])continue;
+		dfs(u);
+	}
+	topo.pb(node);
+}
+
+------------------------------------------------------------------------------------------------------------------------------
+
+// program to detect cycles in directed graphs
+// we mark node with three colours WHITE->0, GREY->1, BLACK->2. 
+// WHITE = unvisited
+// GREY = visited, dfs was called from it, it is still in the call stack
+// BLACK =visited, dfs was called from it and it has finished, no longer in call stack
+// A cycle occurs when 'u'(the child of 'node') has color GREY.
+    
+bool cycle(int node){
+    col[node]=1;
+    visited[node]=true;
+    for(auto u:v[node]){
+        if(!visited[u] && cycle(u))return true;
+        if(col[u]==1)return true;
+    }
+    col[node]=2;
+    return false;
+}
+
+rep(i,1,n+1){
+    if(!visited[i]){
+        if(cycle(i))check=true; //finally check=true means cycle exists...
+    }
+}
