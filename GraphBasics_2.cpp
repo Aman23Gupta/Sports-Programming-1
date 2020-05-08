@@ -215,6 +215,13 @@ int main(){
 	topo.pb(node);
 }
 
+// As there can be more than one topologically sorted ordering... in competetion generally lexicograpically smallest is asked for
+// this can be found by calling dfs in the following manner...
+rem(i,n,0){
+	if(!visited[i])dfs(i);
+}
+reverse(all(topo));
+
 ------------------------------------------------------------------------------------------------------------------------------
 
 // program to detect cycles in directed graphs
