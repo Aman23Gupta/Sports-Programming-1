@@ -19,6 +19,8 @@ int josephus(int n,int k) {
 
 //another implementaion with complexity of O(klogn)
 // remember adding 1 to the answer for 1-based indexing
+// important link to understand this- https://qr.ae/pNynmW
+// another kind of problem involving queries - https://youtu.be/nyVX2lqX8lA
 int josephus(int n, int k) {
     if (n == 1)
         return 0;
