@@ -37,3 +37,7 @@ int josephus(int n, int k) {
         res += res / (k - 1);
     return res;
 }
+
+// another kind of problem that shows that above implementation can be tweaked to obtain last person died... or nth from last person to die...
+//https://www.codechef.com/problems/JOSEPHUS
+// https://www.codechef.com/viewsolution/32963892
