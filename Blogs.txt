@@ -2,6 +2,11 @@ Tricks-
 http://codeforces.com/blog/entry/15643
 https://codeforces.com/blog/entry/75456
 
+DP
+https://apps.topcoder.com/forums/?module=Thread&start=0&threadID=697369
+https://codeforces.com/blog/entry/43256
+https://codeforces.com/blog/entry/45068
+
 https://codeforces.com/blog/entry/53925 ==>Nisiyama_Suzune's blog
 he/she covers advanced maths topics
 
