@@ -1,0 +1,10 @@
+1) COIN CHANGE
+coin change(order matters)
+coin change(order doesn't matter)
+number of ways to partition an integer.
+number of ways to make a sum of N using numbers greater or equal to k.
+
+2) LCS
+Edit Distance
+
+
