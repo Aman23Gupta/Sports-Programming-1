@@ -1,3 +1,12 @@
+//CONTENTS
+// Djkstra
+// Articulation Points
+// 0-1 BFS
+// number of MST
+// Kosaraju SCC
+// Topological sort
+// detect cycle in directed graph
+
 // single sources shortest path for weghted directed/undirected graphs
 vector<pair<int,int>> v[100005];
 priority_queue<pair<int,int>,vector<pair<int,int>>,greater<pair<int,int>>> pq;
