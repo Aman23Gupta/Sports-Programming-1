@@ -1,3 +1,14 @@
+//CONTENTS
+// 1) vanilla DFS
+// 2) SSSP in a tree and number of child  DFS
+// 3) checking if graph is Bipartite
+// 4) cycle detection in undirected graph
+// 5) in-out timer
+// 6) valnilla BFS SSSP for unweighted graph
+// 7) Bridges
+// 8) Kruskal's Algorithm MST
+// 9) LCA
+
 vector<int> v[10000];
 bool visited[10000];
 
