@@ -215,11 +215,11 @@ int main(){
  //note: topo has to reversed.
  // in case of disconnected graph you'll have to call dfs multiple times for each remaining unvisited node.
 vector<int> topo;
-void dfs(int node){
+void ts(int node){
 	visited[node]=true;
 	for(auto u:v[node]){
 		if(visited[u])continue;
-		dfs(u);
+		tss(u);
 	}
 	topo.pb(node);
 }
@@ -227,7 +227,7 @@ void dfs(int node){
 // As there can be more than one topologically sorted ordering... in competetion generally lexicograpically smallest is asked for
 // this can be found by calling dfs in the following manner...
 rem(i,n,0){
-	if(!visited[i])dfs(i);
+	if(!visited[i])ts(i);
 }
 reverse(all(topo));
 
