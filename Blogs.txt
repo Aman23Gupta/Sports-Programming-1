@@ -10,6 +10,8 @@ https://codeforces.com/blog/entry/45068
 https://codeforces.com/blog/entry/53925 ==>Nisiyama_Suzune's blog
 he/she covers advanced maths topics
 
+https://codeforces.com/blog/entry/77298=> slope trick
+
 https://codeforces.com/blog/entry/15296 ==>Adamant's dynamic connectivity
 
 https://codeforces.com/blog/entry/45223 ==>SOS Dynamic Programming
