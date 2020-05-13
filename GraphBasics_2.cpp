@@ -214,8 +214,8 @@ int main(){
  
  //note: topo has to reversed.
  // in case of disconnected graph you'll have to call dfs multiple times for each remaining unvisited node.
- vector<int> topo;
- void dfs(int node){
+vector<int> topo;
+void dfs(int node){
 	visited[node]=true;
 	for(auto u:v[node]){
 		if(visited[u])continue;
