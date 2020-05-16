@@ -30,7 +30,16 @@ struct node{
 
 comparator => bool func(a,b);
 if you want to sort ascending => return b<a;
-if you want to sort descending => return a>b;
+if you want to sort descending => return a<b;
+
+in general i feel like the order is in which the arguments appear is assumed to be the correct order, then you should return true if that ordering is correct and false if thats not the case.
+
+writing comparators for set in cpp
+struct cmp{
+    bool operator()(int a,int b){
+        return a>b;
+    }
+};
 ------------------------------------------------------------------------
 order statistics tree
 https://codeforces.com/blog/entry/11080
