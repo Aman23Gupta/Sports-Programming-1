@@ -1,3 +1,8 @@
+//CONTENTS
+//1) seive of Eratosthenes
+//2) finding prime factorization in sqrt(n)
+//3) Modulo Inverse
+//4) SPF - finding prime factorization in log(n) after precomputation.
 vector<bool> p(5000005,true);
 
 void seive(){
@@ -10,7 +15,8 @@ void seive(){
         }
     }
 }
-
+---------------------------------------------------------------------------------
+    
 // function for prime factorization
 void primeFactors(int n) 
 { 
@@ -38,11 +44,25 @@ void primeFactors(int n)
     if (n > 2) 
         printf ("%d ", n); 
 }
-
+---------------------------------------------------------------------------------
+    
 //to find modulo inverse of numbers till N
 const int mod=998244353;
 int inv[N];
 inv[1] = 1;
 for(int i = 2; i < N; ++i)
     inv[i] = (mod - (mod/i) * inv[mod%i] % mod) % mod;
-
+---------------------------------------------------------------------------------
+//smallest prime factor
+vector<int> spf(10000005,0);
+void SPF(int n) {   
+	spf[1] = 1; 
+    for (int i = 2; i <= n; i++){ 
+        if (spf[i] == 0){ 
+            spf[i] = i;  
+            for (int j = 2*i; j <= n; j += i) 
+                if (spf[j] == 0) 
+                   spf[j] = i; 
+        } 
+    }
+} 
