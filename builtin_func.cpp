@@ -29,6 +29,11 @@ span=how many indexes it would cover;
 usage
 s1.replace(start,span,s2);
 
+syntax for priority queue in cpp
+max heap(largest on top)
+priority_queue<int> one;
 
+min heap(smallest on top)
+priority_queue<int,vector<int>,greater<int>> two;
 
 */
