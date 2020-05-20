@@ -174,7 +174,7 @@ int lca(int a,int b){
 //log(N) LCA
 const int N=10000;
 const int maxN=(int)log2(N)+1;
-int lca[N+1][maxN+1];
+int lca[N+1][maxN+1]; //This table stores for every N node, their ancestors at a distance of powers of two.
 vector<int> v[N];
 int dis[N];
 
@@ -190,7 +190,7 @@ void dfs(int node,int par){
 
 void init(){
     memset(lca, -1, sizeof(lca));
-    dfs(1,-1);
+    dfs(1,-1); //dfs call to fill the immediate parents of each node
     rep(j,1,maxN+1){
         rep(i,1,N+1){
             if(lca[i][j-1]!=-1){
@@ -225,4 +225,4 @@ int LCA(int a,int b){
 //distance between two nodes in log(N) time.
 //preprocess lca and dis arrays
 // distance between a and b = dis[a]+dis[b]-2*dis[LCA(a,b)];
-
+//lca[i][j] represents 2^j th parent of i
