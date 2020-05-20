@@ -1,6 +1,8 @@
 Tricks-
 http://codeforces.com/blog/entry/15643
 https://codeforces.com/blog/entry/75456
+In questions related to strings when n can 10^5 one possible way to approach could be character wise i.e. rep(i,0,26){rep(j,0,n){}}
+eg- https://codeforces.com/contest/519/problem/D
 
 DP
 https://apps.topcoder.com/forums/?module=Thread&start=0&threadID=697369
