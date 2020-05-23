@@ -2,7 +2,8 @@
 CONTENTS
 1) Handshaking Theorem
 2) Euler Path and Euler Ckt
-
+3) Bellman Ford
+4) Floyd Warshall
 
 Handshaking Theorem - In every graph, the sum of the degrees of all vertices equals twice the number of edges.
 
@@ -88,3 +89,57 @@ void euler_dfs(int v){
 	}
 	final_path[fsz++] = temp_path[--tsz];
 }
+//BELLMAN FORD
+// we can use dfs for finding SSSP in case of tree.
+// we can use bfs for finding SSSP in case of unweighted graph.
+// we can use djkstra finding SSSP in case of weighted graphs with non - negative edges. (Elog(v))
+// The algorithm can process all kinds of graphs, provided that the graph does not contain a cycle with negative length.
+// If the graph contains a negative cycle, the algorithm can detect this.
+// just run BF one more time if there is a change in any distance then -ve cycle exists.
+struct Edge {
+    int a, b, w;
+};
+void BF(int n,int m){
+    vector<int> d (n, INF);
+    d[v] = 0;
+    rep(i,0,n-1) {
+        bool any = false;
+		rep(j,0,m)
+            if (d[e[j].a] < INF)// e is the edge list of the type struct Edge;
+                if (d[e[j].b] > d[e[j].a] + e[j].w){
+                    d[e[j].b] = d[e[j].a] + e[j].w;
+                    any = true;
+                }
+
+        if (!any) break;
+    }
+    // display d, for example, on the screen
+}
+
+
+
+//FLOYD WARSHALL
+// used to find shortest distance between any two vertices.
+// This algorithm can also be used to detect the presence of negative cycles.
+// The graph has a negative cycle if at the end of the algorithm, the distance from a vertex v to itself is negative.
+int d[N][N]; // should be initialized with INF;
+
+void FW(int n){
+	rep(i,1,n+1){
+		d[i][i]=0;
+	}
+	// when you input the graph, if i and j are connected by edge with weight w make d[i][j]=w;
+	// this should be done after memset(d,INF,sizeof(d));
+	rep(k,1,n+1){
+	    rep(i,1,n+1){
+			rep(j,1,n+1){
+				if (d[i][k] < INF && d[k][j] < INF)
+				d[i][j] = min(d[i][j], d[i][k] + d[k][j]); 
+			}
+	    }
+	}
+}
+
+// NOTE: for both floyd warshall and bellman ford, it is easy to reproduce the shortest path and not just its length all it would take is
+// a parent array that holds the last vertex which managed to shorten the path for current node. it would be called parent of current node and saved in par.
+
