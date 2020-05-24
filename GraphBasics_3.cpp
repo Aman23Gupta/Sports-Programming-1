@@ -143,3 +143,11 @@ void FW(int n){
 // NOTE: for both floyd warshall and bellman ford, it is easy to reproduce the shortest path and not just its length all it would take is
 // a parent array that holds the last vertex which managed to shorten the path for current node. it would be called parent of current node and saved in par.
 
+//DJKSTRA
+// if you want to list all the nodes that belong shortest path between src and dest... 
+// the find sssp from src and from dest
+// all nodes i such that dsrc[i]+ddest[i]=dsrc[dest] belong to some shortest path in graph.
+
+// if you want to list all the edges that belong to some shortest path firstly find all nodes as stated above ...
+// secondly perform modified djkstra in which you create a adjaceny list.
+// if the edge from s to u shortens dis[u] aur even if its equal to previous value of dis[u] we add s to adj[u]
