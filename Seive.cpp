@@ -66,3 +66,17 @@ void SPF(int n) {
         } 
     }
 } 
+
+----------------------------------------------------------------------------------
+// list all the factors in O(sqrt(n))
+void getFactors(int n,vector<int>& p){     
+    for (int i=1; i<=sqrt(n); i++){ 
+        if (n%i == 0){ 
+            if (n/i == i) p.pb(i);  
+            else{
+                p.pb(i); 
+                p.pb(n/i);
+	    }
+        } 
+    } 
+} 
