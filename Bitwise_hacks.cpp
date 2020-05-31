@@ -7,6 +7,8 @@
 //example
 //if x is 100100 the expression would return 100000
 
+
+//The two's complement of the given no has all bits are reverted except the first '1' from right to left
 -------------------------------------------------------------------------
 
 //to isolate the Most significant set bit the most stable way would be to create a vector containing powers of 2 from 0 to 64.
