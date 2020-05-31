@@ -45,10 +45,12 @@ inline ll mul(ll a,ll b,ll m){
     if((a*b)<m)return a*b;
     return (a*b)%m;
 }
-
+void initialize_globals(){
+    return;
+}
 void solve(){
-
-
+    
+    initialize_globals();
 }
 
 int main(){
