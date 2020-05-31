@@ -8,7 +8,7 @@
 // 7) Bridges
 // 8) Kruskal's Algorithm MST
 // 9) LCA
-
+// 10) Print all paths between src and dest
 vector<int> v[10000];
 bool visited[10000];
 
@@ -226,3 +226,44 @@ int LCA(int a,int b){
 //preprocess lca and dis arrays
 // distance between a and b = dis[a]+dis[b]-2*dis[LCA(a,b)];
 //lca[i][j] represents 2^j th parent of i
+
+
+// Print all paths between src and dest
+void pathFound(vector<int>& path){
+    for(auto u:path){
+        cout<<u<<" ";
+    }
+    cout<<endl;
+}
+
+int isNotVisited(int x, vector<int>& path){ 
+    for(auto u:path)if(u==x)return 0;
+    return 1;
+
+} 
+
+
+void findpaths(int src, int dst){ 
+	 
+	queue<vector<int> > q; 
+	vector<int> path; 
+	path.push_back(src); 
+	q.push(path); 
+	while (!q.empty()) { 
+		path = q.front(); 
+		q.pop(); 
+		int last = path[path.size() - 1]; 
+		if (last == dst) {
+		    pathFound(path);
+		    continue;
+		    // should we contine;
+		}
+		for(auto u:v[last]){
+		    if(isNotVisited(u,path)){
+		        vector<int> newpath(path);
+		        newpath.pb(u);
+		        q.push(newpath);
+		    }
+		}
+	} 
+} 
