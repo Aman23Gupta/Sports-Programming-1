@@ -4,6 +4,10 @@ https://codeforces.com/blog/entry/75456
 In questions related to strings when n can 10^5 one possible way to approach could be character wise i.e. rep(i,0,26){rep(j,0,n){}}
 eg- https://codeforces.com/contest/519/problem/D
 
+suppose a 2-D matix is given as 1-D form as ROW MAJOR. if an elements index is i in 1-D then in 2-D
+col number=i%col
+row number=i/col
+
 DP
 https://apps.topcoder.com/forums/?module=Thread&start=0&threadID=697369
 https://codeforces.com/blog/entry/43256
