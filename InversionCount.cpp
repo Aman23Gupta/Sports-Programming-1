@@ -43,7 +43,6 @@ ll merge(int arr[], int temp[], int left,
 		} 
 		else { 
 			temp[k++] = arr[j++]; 
-			explanation/diagram for merge()*/
 			inv_count = inv_count + (mid - i); 
 		} 
 	} 
