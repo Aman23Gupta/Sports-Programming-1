@@ -14,3 +14,5 @@
 * **Topological Sort** is used for graddle dependency resolution in Android Studio.
 
 * **Topological Sort** helps Operating systems check for presence of deadlock.
+
+* **heaps** are used in Djkstra for finding shortest path.
