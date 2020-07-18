@@ -36,6 +36,9 @@ void dfs1(int node){
 }// here noc=> no of child, dis=> distance from root.
 
 //checking if given graph is Bipartite
+//Bipartite graphs can be divided into two sets such that all the edges are between two points belonging to
+//the two different sets.
+
 bool dfs(int node,int col){
     visited[node]=true;
     co[node]=col;
