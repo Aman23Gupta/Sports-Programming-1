@@ -6,6 +6,7 @@ CONTENTS
 4) Floyd Warshall
 
 Handshaking Theorem - In every graph, the sum of the degrees of all vertices equals twice the number of edges.
+total number of undirected graph that can be formed from 'n' vertices is 2^((n*(n-1))/2)
 
 Euler Path and Euler Ckt.
 A path is a sequence of vertices with the property that each vertex in the sequence is adjacent to the vertex next to it. 
