@@ -5,8 +5,8 @@ CONTENTS
 3) Bellman Ford
 4) Floyd Warshall
 
-2nCn/(n+1)= distinct BSTs can be constructed with n distinct keys
-
+2nCn/(n+1)= distinct BSTs can be constructed with n distinct keys.
+The number of unique BSTs with 'n' nodes is equal to nth catalan number.
 Handshaking Theorem - In every graph, the sum of the degrees of all vertices equals twice the number of edges.
 total number of undirected graph that can be formed from 'n' vertices is 2^((n*(n-1))/2)
 
