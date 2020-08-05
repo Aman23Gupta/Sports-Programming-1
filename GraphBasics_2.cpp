@@ -8,6 +8,8 @@
 // detect cycle in directed graph
 
 // single sources shortest path for weghted directed/undirected graphs
+//O(VlogV + E)
+//if priority_queue isn't cusomizable use a set instead.
 vector<pair<int,int>> v[100005];
 priority_queue<pair<int,int>,vector<pair<int,int>>,greater<pair<int,int>>> pq;
 vector<int> dis(100005,mod);
