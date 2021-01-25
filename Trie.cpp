@@ -109,6 +109,7 @@ void inorder(node* cur,string s){
     }
 }
 
+
 void solve(){
     node root;
     string s;
