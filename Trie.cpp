@@ -139,3 +139,31 @@ int main(){
     }
     return 0;
 }
+
+Motivation
+The main motivation for using trie is that we want to efficiently search for a word in a dataset of strings. We can use hash table or balanced trees for this task. However, trie has its unique advantages:
+
+VS. Hash Table:
+
+Hash table has O(1) time complexity for looking up a key but it is not efficient for the operations:
+
+Finding all keys with a common prefix. We have to traverse all keys in hash table, which can be O(n) (n is the number of keys inserted). However, trie takes O(k) (k is the length of the prefix).
+Enumerating a dataset of strings in lexicographical order. There is a sorting on all strings (i.e. keys) and thus O(nlogn). However, trie takes O(n) time only.
+Search in hash table can be O(n) if there are plenty of hash collisions. However, trie only takes O(m) (m is the key length)
+
+Compared to hash table, trie saves space when storing many keys with the same prefix.
+
+VS. balanced trees:
+
+Search in balanced tree can take O(mlogn) time. However, trie only takes O(m).
+    
+    
+Applications
+Trie is useful when we want to search some string based on the character appearance of the characters within the string:
+
+Autocomplete
+Spell checker
+IP routing (Longest prefix matching
+T9 predictive text
+Solving Boggle
+Huffman Codes (§10.1.2 in MAW(cpp))
