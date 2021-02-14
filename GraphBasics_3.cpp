@@ -107,13 +107,14 @@ void BF(int n,int m){
     d[v] = 0;
     rep(i,0,n-1) {
         bool any = false;
-		rep(j,0,m)
-            if (d[e[j].a] < INF)// e is the edge list of the type struct Edge;
-                if (d[e[j].b] > d[e[j].a] + e[j].w){
-                    d[e[j].b] = d[e[j].a] + e[j].w;
-                    any = true;
-                }
-
+		rep(j,0,m){			
+		    if (d[e[j].a] < INF){// e is the edge list of the type struct Edge;
+			if (d[e[j].b] > d[e[j].a] + e[j].w){
+			    d[e[j].b] = d[e[j].a] + e[j].w;
+			    any = true;
+			}
+		    }		
+		}
         if (!any) break;
     }
     // display d, for example, on the screen
