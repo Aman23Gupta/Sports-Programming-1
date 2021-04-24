@@ -109,7 +109,7 @@ void bfs(int node){
 //finding bridges
 //the code is based on in and low times
 // in time when dfs reaches the node
-// low it is the lowest time when dfs reaches node or its ancestors(nodes it is directly connected with).
+// low it is the lowest time when dfs reaches node or its ancestors with a back edge.
 
 void dfs(int node,int par){
     visited[node]=true;
