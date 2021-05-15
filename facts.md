@@ -22,3 +22,15 @@
 * Maximum and minimum of an array using minimum number of comparisons :-
    1. if n is odd 3*(n-1)/2
    2. if n is even 3n/2-2
+ 
+ * Hn  =  1+1/2+1/3+1/4+....+1/n
+ 
+    This is a harmonic sequence and it is famous for its very slow growth of its partial sums. Though it seems to be convergent but it is divergent in nature.
+
+    If we take the help of computer to find the approximate values such as:
+
+    For n = 50,000 the sum will be  Hn≈11.4 
+
+    For n = 100,000 the sum will be  Hn≈12.1
+    
+    For n = 1,000,000 the sum will be Hn≈14.4
