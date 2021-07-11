@@ -1,3 +1,5 @@
 -> input sorted/ reverse sorted
 -> empty input/ input with single element
 -> all negative/ all positive / all zeros
+-> integer overflow
+-> input can having digits and wildcards('*') then check only digits input, wildcard + digits, only wildcards
