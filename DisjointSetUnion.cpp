@@ -29,3 +29,34 @@ int main(){
         unio(a,b);
     }    
 }
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+class DSU{
+private:
+    vector<int> parent;
+public:
+    DSU(int n){
+        parent.resize(n);
+    }
+    void setParent(int ind,int val){
+        parent[ind]=val;
+    }
+    int findFunc(int ind){
+        if(ind!=parent[ind]){
+            parent[ind]=findFunc(parent[ind]);
+        }
+        return parent[ind];
+    }
+    bool unionFunc(int ind1, int ind2){
+        int parentInd1=findFunc(ind1);
+        int parentInd2=findFunc(ind2);
+        if(parentInd1==parentInd2){
+            return false;
+        }
+        
+        parent[parentInd1]=parentInd2;
+        return true;
+    }
+};
+
