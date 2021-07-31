@@ -54,6 +54,7 @@ bool dfs(int node,int col){
 }
 
 //cycle detection
+//if this function is used for counting the cycles, this would return twice the actual number.
 bool dfs(int node,int par){
     visited[node]=true;
     for(auto child:v[node]){
